@@ -1,0 +1,9 @@
+piège vietcong
+
+ACE advanced medical:
+ * [player, 0.8, "leg_r", "bullet"] call ace_medical_fnc_addDamageToUnit
+ * [cursorTarget, 1, "body", "stab"] call ace_medical_fnc_addDamageToUnit
+ 
+ ACE basic medical:
+ [player, "body", 0.9, objNull, "Bullet"] call ace_medical_fnc_handleDamage;
+[player, "head", 0.9, objNull, "Bullet"] call ace_medical_fnc_handleDamage; 

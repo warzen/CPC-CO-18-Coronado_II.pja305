@@ -1,0 +1,1 @@
+nul = [] execVM "ambient.sqf";

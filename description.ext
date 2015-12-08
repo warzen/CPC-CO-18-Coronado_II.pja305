@@ -1,0 +1,58 @@
+author="Warzen";
+OnLoadName = "Opération Coronado 2";
+OnLoadMission = "Patrouille dans le delta du Mekong. Seuls les RTO ont des radios. v1";
+loadScreen = "Images\MRF_vietnam.jpg";
+OnLoadMissionTime = True;
+
+respawn="Bird";
+RespawnDelay = 5;
+
+Briefing = 1;
+Debriefing = 1;
+Saving = 0;
+allowFunctionsLog=1;
+
+ShowCompass = 1;
+ShowMap = 1;
+ShowGPS = 1;
+ShowWatch = 1;
+ShowPad = 1;
+ShowRadio = 1;
+
+class Header
+{
+    gameType = COOP;
+    minPlayers = 12;
+    maxPlayers = 18;
+};
+
+
+forceRotorLibSimulation = 0;	// Rotor Simu selon joueur
+enableDebugConsole = 1;			// Console debug dispo uniquement admin
+joinUnassigned = 1;				// Joueur non assigne
+
+
+
+
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Accomplie";
+		subtitle = "";
+		description = "Bravo !";
+		pictureBackground = "";
+		picture = "Images\cpc256.paa";
+		pictureColor[] = {1,1,1,1};
+	};
+    class End2
+	{
+		title = "Mission Echouée";
+		subtitle = "";
+		description = "EPIC FAIL !";
+		pictureBackground = "";
+		picture = "Images\cpc256.paa";
+		pictureColor[] = {1,1,1,1};
+	};
+};

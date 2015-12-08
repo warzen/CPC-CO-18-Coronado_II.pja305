@@ -37,11 +37,21 @@ PAT16 = PAT8 + PAT8;
 // deux patrouilles de 4 autours de la zone et une patrouille de 6 en DEFEND
 // par défaut, seules une des patrouilles hors zone et une patrouille dans la zone ont le droit de répondre à une demande à l'aide.
 
+// test
+
+WZ_A1_AI_Spawn=
+[
+	[ [PAT6, "WZ_A1"], ["PATROL_GARRISON"], [true, false, true] ]
+
+];
+[WZ_A1_AI_Spawn] spawn T8U_fnc_Spawn;
+/*
 WZ_A1_AI_Spawn=
 [
 	[ [PAT6, "WZ_A1"], ["PATROL"] ],
 	[ [PAT6, "WZ_A1"], ["PATROL"], [true, false, true] ],
-	[ [PAT6, "WZ_A1"], ["PATROL_GARRISON"], [true, false, true] ],
+	//[ [PAT6, "WZ_A1"], ["PATROL_GARRISON"], [true, false, true] ],
+	[ [PAT6, "WZ_A1"], ["PATROL"], [true, false, true] ],
 	[ [PAT4, "WZ_A1"], ["PATROL_AROUND"] ],
 	[ [PAT4, "WZ_A1"], ["PATROL_AROUND"], [true, false, true] ],
 	[ [PAT6, "WZ_A1"], ["DEFEND"], [true, false, false] ]
@@ -51,7 +61,8 @@ WZ_A2_AI_Spawn=
 [
 	[ [PAT6, "WZ_A2"], ["PATROL"] ],
 	[ [PAT6, "WZ_A2"], ["PATROL"], [true, false, true] ],
-	[ [PAT6, "WZ_A2"], ["PATROL_GARRISON"], [true, false, true] ],
+	//[ [PAT6, "WZ_A2"], ["PATROL_GARRISON"], [true, false, true] ],
+	[ [PAT6, "WZ_A2"], ["PATROL"], [true, false, true] ],
 	[ [PAT4, "WZ_A2"], ["PATROL_AROUND"] ],
 	[ [PAT4, "WZ_A2"], ["PATROL_AROUND"], [true, false, true] ],
 	[ [PAT6, "WZ_A2"], ["DEFEND"], [true, false, false] ]
