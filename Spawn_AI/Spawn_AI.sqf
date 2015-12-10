@@ -43,8 +43,8 @@ waitUntil { !isNil "T8U_var_InitDONE" };
 /*
 WZ_AO1_AI_Spawn=
 [
-	[[PAT2, "WZ_AO1"], ["PATROL"] ],
-	[[PAT4, "WZ_AO1"], ["PATROL"] ]
+	[[PAT2, "WZ_A1"], ["PATROL_AROUND"] ],
+	[[PAT4, "WZ_A1"], ["PATROL_AROUND", 100] ]
 ];
 
 [WZ_AO1_AI_Spawn] spawn T8U_fnc_Spawn;
@@ -55,8 +55,8 @@ WZ_A1_AI_Spawn=
 	[ [PAT6, "WZ_A1"], ["PATROL"] ],
 	[ [PAT6, "WZ_A1"], ["PATROL_GARRISON"], [true, false, true] ],
 	[ [PAT6, "WZ_A1"], ["PATROL"], [true, false, true] ],
-	[ [PAT4, "WZ_A1"], ["PATROL_AROUND"] ],
-	[ [PAT4, "WZ_A1"], ["PATROL_AROUND"], [true, false, true] ],
+	[ [PAT4, "WZ_A1"], ["PATROL_AROUND",75] ],
+	[ [PAT4, "WZ_A1"], ["PATROL_AROUND",150], [true, false, true] ],
 	[ [PAT6, "WZ_A1"], ["DEFEND"], [true, false, false] ]
 ];
 
@@ -65,8 +65,8 @@ WZ_A2_AI_Spawn=
 	[ [PAT6, "WZ_A2"], ["PATROL"] ],
 	[ [PAT6, "WZ_A2"], ["PATROL_GARRISON"], [true, false, true] ],
 	[ [PAT6, "WZ_A2"], ["PATROL"], [true, false, true] ],
-	[ [PAT4, "WZ_A2"], ["PATROL_AROUND"] ],
-	[ [PAT4, "WZ_A2"], ["PATROL_AROUND"], [true, false, true] ],
+	[ [PAT4, "WZ_A2"], ["PATROL_AROUND",75] ],
+	[ [PAT4, "WZ_A2"], ["PATROL_AROUND",150], [true, false, true] ],
 	[ [PAT6, "WZ_A2"], ["DEFEND"], [true, false, false] ]
 ];
 

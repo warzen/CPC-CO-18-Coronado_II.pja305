@@ -89,20 +89,22 @@ T8U_var_SupportUnitsEAST = [];
 T8U_var_SupportUnitsWEST = [];
 T8U_var_SupportUnitsRESISTANCE = [];
 
-
+/*
 // this groups of units are spawned directly at mission start
 _SpawnThisUnits = 
 [ 
 	[ [ _groupArrayMiniPat, "Marker01", "T8u_fnc_rmNVG_TEST" ], [ "PATROL" ] ],
-	[ [ _groupArrayMiniPat, "Marker08", "T8u_fnc_rmNVG_TEST" ], [ "PATROL" ]  ],
-	[ [ _groupArrayFullPat, "Marker02" ], [ "PATROL_AROUND" ] ],
-	[ [ _groupArrayFullPat, "Marker09" ], [ "PATROL_AROUND" ] ],
+	[ [ _groupArrayFullPat, "Marker01" ], [ "PATROL_AROUND" ] ],
+	[ [ _groupArrayFullPat, "Marker02" ], [ "PATROL_AROUND", 50 ] ],
 	[ [ _groupArrayFullTeam, "Marker03" ], [ "GARRISON" ] ],
 	[ [ _groupArrayFullTeam, "Marker03_f" ], [ "GARRISON" ] ],
 	[ [ _groupArrayFireTeam, "Marker04", "T8u_fnc_rmNVG_TEST" ], [ "DEFEND" ], [ true, false, false ] ],
 	[ [ _groupArrayFullTeam, "Marker05" ], [ "LOITER" ] ],
 	[ [ _groupArrayFullTeam, "Marker06" ], [ "PATROL_GARRISON" ] ],
 	[ [ _groupArrayW_APC + _groupArrayFireTeam, "Marker07", false ], [ "PATROL_URBAN" ] ],
+	[ [ _groupArrayMiniPat, "Marker08", "T8u_fnc_rmNVG_TEST" ], [ "PATROL" ]  ],
+	[ [ _groupArrayFullPat, "Marker09" ], [ "PATROL_AROUND", 150 ] ],
+	
 	[ [ _groupArrayFullTeam, "ip" ], [ "PATROL_MARKER", [ "ip1", "ip2", "ip3" ] ] ],
 	[ [ _groupArrayIfritPat + _groupArrayFullTeam, "vp", false ], [ "PATROL_MARKER", [ "vp1", "vp2", "vp3" ], false ] ],
 	[ [ _groupArraySniperTeam, "spawnSnipers" ], [ "OVERWATCH", "overwatchTHIS" ] ],
@@ -117,7 +119,7 @@ _SpawnThisUnits =
 	[ [ _groupArrayCIV, "MarkerCIV", CIVILIAN ], [ "GARRISON" ] ]	
 ];
 
-//[ _SpawnThisUnits ] spawn T8U_fnc_Spawn;
+[ _SpawnThisUnits ] spawn T8U_fnc_Spawn;
 
 // this groups of units are spawned on demand with triggers created by a function -> T8U_fnc_Zone 
 // they are spawned when a WEST unit is near and they will be cached when no WEST unit is near
@@ -154,8 +156,8 @@ BLUFOR_attack_02 =
 ];
 // im Radio-Trigger: [ BLUFOR_attack_02 ] spawn T8U_fnc_Spawn;
 
-//[] execVM "Spawn_AI\Spawn_AI.sqf";
-/*
+
+
 testpol_01 = [ testlog_01 ] call T8U_fnc_getPolygon;
 testpol_02 = [ testlog_02 ] call T8U_fnc_getPolygon;
 testpol_03 = [ testlog_03 ] call T8U_fnc_getPolygon;

@@ -46,7 +46,7 @@ waitUntil{time > 0};
 
 
 
-fn_createPlane = compile preprocessfile "fn_createPlane.sqf";
+//fn_createPlane = compile preprocessfile "fn_createPlane.sqf";
 
 
 for "_i" from 1 to 3 do {

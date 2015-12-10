@@ -59,3 +59,15 @@ class CfgDebriefing
 		pictureColor[] = {1,1,1,1};
 	};
 };
+
+
+class CfgSounds
+{
+	 sounds[]={};
+	 class wz_aie
+	 {
+		 name="Aie";
+		 sound[]={"\Sounds\hurt.ogg",0.5,1};
+		 titles[] = {0,""};
+	 };
+};

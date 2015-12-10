@@ -37,9 +37,9 @@
 
 // DEBUG Settings
 
-T8U_var_DEBUG			= true;
-T8U_var_DEBUG_hints		= true;
-T8U_var_DEBUG_marker	= true;
+T8U_var_DEBUG			= false;
+T8U_var_DEBUG_hints		= false;
+T8U_var_DEBUG_marker	= false;
 T8U_var_DEBUG_useCon	= false;
 
 /*
@@ -70,13 +70,13 @@ T8U_var_EnemySide 				= EAST;
 T8U_var_GuerDiplo 				= 1;
 
 // Units will go RED when in combat, then go GREEN after some time ( T8_UnitsEngageAtWillTime ), and then return to T8U_fnc_SpawnCombatMode
-T8U_var_AllowCBM				= false;
+T8U_var_AllowCBM				= true;
 
 T8U_var_TaskReturnTime			= 30;			// when SAD WP is finished group will redo origin task after x sec
 T8U_var_CacheTime				= 15;			// units in Zones are cached after X seconds when zone is left
 T8U_var_DirectCallRange			= 1200;			// group leader searches for help within XXX m
-T8U_var_RevealRange				= 300;			// group leader shares info of enemies he "knowsabout > 1" to friendly units within XXX m
-T8U_var_PatAroundRange			= 75;			// zone radius + T8U_var_PatAroundRange (e.g. 40 m) is the distance where units will patrol around zones.
+T8U_var_RevealRange				= 200;			// group leader shares info of enemies he "knowsabout > 1" to friendly units within XXX m
+T8U_var_PatAroundRange			= 50;			// zone radius + T8U_var_PatAroundRange (e.g. 40 m) is the distance where units will patrol around zones.
 T8U_var_KilledLeaderTimeout		= 20;			// if group leader killed, x sec no communication > then check for new group leader who can communicate
 T8U_var_FiredEventTimeout		= 10;			// if fired near event triggered, pause it for XX sec ... spam reduce
 T8U_var_CallForHelpTimeout		= 60;			// a group can only call one other group each x sec for help
@@ -112,7 +112,7 @@ T8U_var_SkillSets =
 		[ "aimingAccuracy",		0.30 ],
 		[ "aimingShake",		0.25 ],
 		[ "aimingSpeed",		0.30 ],
-		[ "spotDistance",		0.85 ],
+		[ "spotDistance",		0.25 ],
 		[ "spotTime",			0.75 ],
 		[ "courage",			0.50 ],
 		[ "reloadSpeed",		0.40 ],

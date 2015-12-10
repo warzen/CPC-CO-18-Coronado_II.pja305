@@ -31,6 +31,7 @@ hard_setLoadout =
 		case "us_demo": {[_unit] call loadoutUS_DEMO};
 		case "us_r": {[_unit] call loadoutUS_R};
 		case "us_rto": {[_unit] call loadoutUS_RTO};
+		case "us_gre": {[_unit] call loadoutUS_GRE};
 	};
 };
 
@@ -74,7 +75,7 @@ loadoutUS_SL = //
 	this linkItem "ItemMap";
 	this linkItem "ItemCompass";
 	this linkItem "ItemWatch";
-
+	this addWeapon "Binocular";
 
 
 
@@ -283,6 +284,50 @@ loadoutUS_RTO = //
 	this addItemToVest "SmokeShellGreen";
 	this addBackpack "CPC_nam_gear_bag_alice_green";
 	this addItemToBackpack "ACRE_PRC117F";
+
+	_rnd_helmet = ["CPC_nam_gear_us_helmet_m1a1_1","CPC_nam_gear_us_helmet_m1a1_2","CPC_nam_gear_us_helmet_m1a1_3","CPC_nam_gear_us_helmet_m1a1_5","CPC_nam_gear_us_helmet_m1a1_7"] call BIS_fnc_selectRandom;
+	this addHeadgear _rnd_helmet;
+
+
+	this addWeapon "CPC_nam_weapon_m16a1";
+	
+
+	this linkItem "ItemMap";
+	this linkItem "ItemCompass";
+	this linkItem "ItemWatch";
+
+};
+
+loadoutUS_GRE = //
+{
+	_unit = _this select 0;
+	this = _unit;
+
+	removeAllWeapons this;
+	removeAllItems this;
+	removeAllAssignedItems this;
+	removeUniform this;
+	removeVest this;
+	removeBackpack this;
+	removeHeadgear this;
+	removeGoggles this;
+	
+	
+	this forceAddUniform "CPC_nam_gear_us_uniform";
+	for "_i" from 1 to 2 do {this addItemToUniform "ACE_fieldDressing";};
+	this addItemToUniform "ACE_EarPlugs";
+	this addItemToUniform "ACE_morphine";
+	for "_i" from 1 to 4 do {this addItemToUniform "CPC_nam_mag_20rnd_556x45";};
+	this addItemToUniform "HandGrenade";
+	this addVest "CPC_nam_gear_us_vest_2";
+	this addItemToVest "HandGrenade";
+	for "_i" from 1 to 2 do {this addItemToVest "SmokeShell";};
+	for "_i" from 1 to 1 do {this addItemToVest "CPC_nam_mag_20rnd_556x45";};
+	for "_i" from 1 to 20 do {this addItemToVest "CUP_1Rnd_HE_M203";};
+	
+	this addBackpack "CPC_nam_gear_bag_alice_green";
+	this addItemToBackpack "CUP_glaunch_M79";
+	for "_i" from 1 to 10 do {this addItemToBackpack "CUP_1Rnd_HE_M203";};
 
 	_rnd_helmet = ["CPC_nam_gear_us_helmet_m1a1_1","CPC_nam_gear_us_helmet_m1a1_2","CPC_nam_gear_us_helmet_m1a1_3","CPC_nam_gear_us_helmet_m1a1_5","CPC_nam_gear_us_helmet_m1a1_7"] call BIS_fnc_selectRandom;
 	this addHeadgear _rnd_helmet;
