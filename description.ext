@@ -32,7 +32,10 @@ enableDebugConsole = 1;			// Console debug dispo uniquement admin
 joinUnassigned = 1;				// Joueur non assigne
 
 
-
+class cfgFunctions
+{
+	#include <T8\FUNCTIONS.hpp>
+};
 
 
 class CfgDebriefing

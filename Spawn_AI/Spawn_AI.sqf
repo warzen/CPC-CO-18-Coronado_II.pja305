@@ -37,14 +37,23 @@ PAT16 = PAT8 + PAT8;
 // deux patrouilles de 4 autours de la zone et une patrouille de 6 en DEFEND
 // par défaut, seules une des patrouilles hors zone et une patrouille dans la zone ont le droit de répondre à une demande à l'aide.
 
-// test
+waitUntil { !isNil "T8U_var_InitDONE" };
 
+// test
+/*
+WZ_AO1_AI_Spawn=
+[
+	[[PAT2, "WZ_AO1"], ["PATROL"] ],
+	[[PAT4, "WZ_AO1"], ["PATROL"] ]
+];
+
+[WZ_AO1_AI_Spawn] spawn T8U_fnc_Spawn;
+*/
 
 WZ_A1_AI_Spawn=
 [
 	[ [PAT6, "WZ_A1"], ["PATROL"] ],
-	[ [PAT6, "WZ_A1"], ["PATROL"], [true, false, true] ],
-	//[ [PAT6, "WZ_A1"], ["PATROL_GARRISON"], [true, false, true] ],
+	[ [PAT6, "WZ_A1"], ["PATROL_GARRISON"], [true, false, true] ],
 	[ [PAT6, "WZ_A1"], ["PATROL"], [true, false, true] ],
 	[ [PAT4, "WZ_A1"], ["PATROL_AROUND"] ],
 	[ [PAT4, "WZ_A1"], ["PATROL_AROUND"], [true, false, true] ],
@@ -54,24 +63,27 @@ WZ_A1_AI_Spawn=
 WZ_A2_AI_Spawn=
 [
 	[ [PAT6, "WZ_A2"], ["PATROL"] ],
-	[ [PAT6, "WZ_A2"], ["PATROL"], [true, false, true] ],
-	//[ [PAT6, "WZ_A2"], ["PATROL_GARRISON"], [true, false, true] ],
+	[ [PAT6, "WZ_A2"], ["PATROL_GARRISON"], [true, false, true] ],
 	[ [PAT6, "WZ_A2"], ["PATROL"], [true, false, true] ],
 	[ [PAT4, "WZ_A2"], ["PATROL_AROUND"] ],
 	[ [PAT4, "WZ_A2"], ["PATROL_AROUND"], [true, false, true] ],
 	[ [PAT6, "WZ_A2"], ["DEFEND"], [true, false, false] ]
 ];
 
-// WZ_AO sert pour l'area of operation, la vaste zone pour des patrouilles de petites tailles mais prêtes à appuyer n'importe qui
+// WZ_AO1 sert pour l'area of operation, la vaste zone pour des patrouilles de petites tailles mais prêtes à appuyer n'importe qui
 
-WZ_AO_AI_Spawn=
+WZ_AO1_AI_Spawn=
 [
-	[[PAT2, "WZ_AO"], ["PATROL"] ],
-	[[PAT2, "WZ_AO"], ["PATROL"] ],
-	[[PAT2, "WZ_AO"], ["PATROL"] ],
-	[[PAT2, "WZ_AO"], ["PATROL"] ],
-	[[PAT4, "WZ_AO"], ["PATROL"] ],
-	[[PAT4, "WZ_AO"], ["PATROL"] ]
+	[[PAT2, "WZ_AO1"], ["PATROL"] ],
+	[[PAT2, "WZ_AO1"], ["PATROL"] ],
+	[[PAT2, "WZ_AO1"], ["PATROL"] ],
+	[[PAT2, "WZ_AO1"], ["PATROL"] ],
+	[[PAT2, "WZ_AO1"], ["PATROL"] ],
+	[[PAT2, "WZ_AO1"], ["PATROL"] ],
+	[[PAT2, "WZ_AO1"], ["PATROL"] ],
+	[[PAT2, "WZ_AO1"], ["PATROL"] ],
+	[[PAT4, "WZ_AO1"], ["PATROL"] ],
+	[[PAT4, "WZ_AO1"], ["PATROL"] ]
 ];
 
 // les WZ_QRF_A1 (etc...) sont des troupes de renfort dont le but est de réattaquer des zones contestées et spawnées par trigger
@@ -90,4 +102,4 @@ WZ_A2_QRF_Spawn=
 
 [WZ_A1_AI_Spawn] spawn T8U_fnc_Spawn;
 [WZ_A2_AI_Spawn] spawn T8U_fnc_Spawn;
-[WZ_AO_AI_Spawn] spawn T8U_fnc_Spawn;
+[WZ_AO1_AI_Spawn] spawn T8U_fnc_Spawn;

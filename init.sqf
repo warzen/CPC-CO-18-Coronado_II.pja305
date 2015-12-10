@@ -22,7 +22,6 @@ asr_ai3_main_sets = [ // for each level: skilltype, [<min value>, <random value 
 ];
 
 // initialisation T8 Units
-[] execVM "T8_UnitsINIT.sqf"; 
 [] execVM "T8_missionEXEC.sqf";
 
 [] execVM "Spawn_AI\Spawn_AI.sqf";
