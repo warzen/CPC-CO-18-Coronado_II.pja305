@@ -39,13 +39,7 @@ PAT16 = PAT8 + PAT8;
 
 // test
 
-WZ_A1_AI_Spawn=
-[
-	[ [PAT6, "WZ_A1"], ["PATROL_GARRISON"], [true, false, true] ]
 
-];
-[WZ_A1_AI_Spawn] spawn T8U_fnc_Spawn;
-/*
 WZ_A1_AI_Spawn=
 [
 	[ [PAT6, "WZ_A1"], ["PATROL"] ],
